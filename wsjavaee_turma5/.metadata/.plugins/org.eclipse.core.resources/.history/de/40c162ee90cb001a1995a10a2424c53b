@@ -1,0 +1,9 @@
+package br.com.itau.gerenciador.dao;
+
+import org.springframework.data.repository.CrudRepository;
+
+import br.com.itau.gerenciador.model.Artista;
+
+public interface ArtistaDAO extends CrudRepository<Artista, Integer> {
+
+}

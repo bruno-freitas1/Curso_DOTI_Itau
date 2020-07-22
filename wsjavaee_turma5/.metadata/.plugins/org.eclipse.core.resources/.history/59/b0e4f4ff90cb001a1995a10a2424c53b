@@ -1,0 +1,12 @@
+package br.com.itau.gerenciador.dao;
+
+import org.springframework.data.repository.CrudRepository;
+
+import br.com.itau.gerenciador.model.Artista;
+import br.com.itau.gerenciador.model.Usuario;
+
+public interface ArtistaDAO extends CrudRepository<Artista, Integer> {
+	
+	Artista findByNacionalidade(String nacionalidade);
+
+}

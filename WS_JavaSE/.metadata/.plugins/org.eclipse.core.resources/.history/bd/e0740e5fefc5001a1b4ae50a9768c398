@@ -1,0 +1,32 @@
+package br.com.colecoes.principal;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class TesteLista {
+
+	public static void main(String[] args) {
+		/*
+		 * List - é a interface e tem sub classes - ArryaList, LinkedList, etc.
+		 * ArrayList ou LinkedList - implementação
+		 * É dinamico e não precisa configurar o tamanho na declaração
+		 * Pode adicionar qualquer tipo de dados dentro, inclusive outras listas
+		 */
+
+		List lista = new ArrayList();
+		
+		lista.add("DBA");
+		lista.add("DBA");
+		lista.add("ESTAGIARIO");
+		lista.add("ANALISTA");
+		System.out.println(lista);
+		
+		Collections.sort(lista);
+		System.out.println(lista);
+		
+		
+		
+	}
+
+}

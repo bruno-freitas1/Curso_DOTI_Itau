@@ -1,0 +1,49 @@
+package br.com.banco.modelo;
+
+public class PessoaFisica extends Cliente{
+	
+	private String cpf;
+	private String rg;
+	
+	
+	public String getAll() {
+		return
+				"CPF: " + cpf + "\n" +
+				"RG: " + rg;
+	}
+	
+	public void setAll(String cpf, String rg) {
+		this.cpf = cpf;
+		this.rg = rg;
+	}
+	
+	
+	
+	public PessoaFisica() {
+		super();
+	}
+	public PessoaFisica(String cpf, String rg) {
+		super();
+		this.cpf = cpf;
+		this.rg = rg;
+	}
+	
+	
+	
+	
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+	public String getRg() {
+		return rg;
+	}
+	public void setRg(String rg) {
+		this.rg = rg;
+	}
+	
+	
+
+}

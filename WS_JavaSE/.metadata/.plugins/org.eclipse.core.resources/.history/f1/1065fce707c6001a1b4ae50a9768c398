@@ -1,0 +1,12 @@
+package br.com.banco.modelo;
+
+public class PessoaFisica extends Cliente{
+	
+	private String cpf;
+	private String rg;
+	
+	
+	
+	
+
+}

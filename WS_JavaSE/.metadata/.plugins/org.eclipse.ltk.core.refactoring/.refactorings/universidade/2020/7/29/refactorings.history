@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;br.com.universidade.tela&apos; to &apos;polimorfismo/src&apos;&#x0D;&#x0A;- Original project: &apos;universidade&apos;&#x0D;&#x0A;- Destination element: &apos;polimorfismo/src&apos;&#x0D;&#x0A;- Original element: &apos;universidade/src/br.com.universidade.tela&apos;" description="Copy package" destination="=polimorfismo/src" element1="/src&lt;br.com.universidade.tela" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1594667086112" version="1.0"/>
+</session>

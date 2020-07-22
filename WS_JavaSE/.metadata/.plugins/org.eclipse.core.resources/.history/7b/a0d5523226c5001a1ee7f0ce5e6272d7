@@ -1,0 +1,28 @@
+package br.com.universidade.implementacao;
+
+import br.com.universidade.modelo.Aluno;
+import br.com.universidade.modelo.Professor;
+import br.com.universidade.tela.Magica;
+
+public class ImplementarPessoa {
+
+	public static void main(String[] args) {
+		
+		
+		
+		int selecao = Magica.i("Favor selecionar 1 para Professor e 2 para Aluno ");
+		
+		if(selecao == 1) {
+			Professor obj = new Professor();
+		} else if (selecao ==2){
+			Aluno obj2 = new Aluno();
+		}
+		else {
+			System.out.println("Opção Inválida");
+		}
+		
+		
+		
+	}
+
+}

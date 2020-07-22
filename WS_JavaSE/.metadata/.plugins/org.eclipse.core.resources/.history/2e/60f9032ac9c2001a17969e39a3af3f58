@@ -1,0 +1,12 @@
+package br.com.universidade.implementacao;
+
+public class ImplementarAluno {
+
+	public static void main(String[] args) {
+
+		Aluno objeto = new Aluno();
+		
+
+	}
+
+}

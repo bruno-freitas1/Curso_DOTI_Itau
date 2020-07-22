@@ -1,0 +1,10 @@
+package br.com.universidade.implementacao;
+
+public class ImplementarPessoa {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

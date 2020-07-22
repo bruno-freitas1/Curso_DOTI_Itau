@@ -1,0 +1,120 @@
+package br.com.polimorfismo.modelo;
+
+import br.com.polimorfismo.padroes.PadraoFormacao;
+
+/*
+ * Polimorfismo: o mesmo método possui várias funções
+ * Dois tipos:
+ * 1 - Override (sobrescrita): quando os métodos estão em classes diferentes com processo de herança
+ * 2 - Overload (sobrecarga): quando os métodos estão na mesma classe
+ */
+
+
+public abstract class Formacao {
+
+	private String descricao = new String();    // quando o atributo é do tipo de um classe, é necessário para evitar problemas na implementação. Isso aciona o construtor da classe String e devolve o valor null
+	private int periodo;						// quando o atributo é do tipo primitivo, o mesmo já inicia com valor "0".
+	private double mensalidade;
+	private int duracao;
+	
+	
+	// Métodos
+	
+	
+	// polimorfismo Override com o calcularMensalidade - esse mesmo método está presente nas classes filhas e é executado com preferencia quando solicitado na implementação
+	public void calcularMensalidade(double fator) {}
+	
+	
+	public void definirDuracao() {
+		if (this instanceof Medio) {
+			duracao = 36;
+		} else if (this instanceof Tecnologo) {
+			duracao = 24;
+		} else {
+			if (descricao.indexOf("ENGENHARIA")==-1){
+				duracao=48;
+			} else {
+				duracao=60;
+			}
+		}
+	}
+	
+	// Polimorfismo Overload com o exibirMedia - tem que mudar os parametros, tipos ou quantidade.
+	
+	public double exibirMedia(double ps1, double ps2) {
+		return (ps1 + ps2)/2;
+	}
+	
+	public double exibirMedia(double ps1, double ps2, double nac1, double nac2) {
+		return (ps1*0.8 + ps2*0.8 + nac1*0.2 + nac2*0.2)/2;
+	}
+	
+	public double exibirMedia(double ps1, double ps2, double nac1, double nac2, double am1, double am2) {
+		return (ps1*0.5 + ps2*0.5 + nac1*0.2 + nac2*0.2 + am1*0.3 + am2*0.3)/2;
+	}	
+	
+	
+	// metodos get and set All
+		
+	public String getAll(){
+		return
+				"Descrição: " + descricao + "\n" +
+				"Periodo: " + periodo + "\n" +
+				"Mensalidade: " + mensalidade + "\n" +
+				"Duracao: " + duracao;
+	}
+	
+	public void setAll(String descricao, int periodo, double mensalidade, int duracao) {
+		this.descricao = descricao;
+		this.periodo = periodo;
+		this.mensalidade = mensalidade;
+		this.duracao = duracao;
+	}
+
+	
+	// metodos construtores
+	
+	public Formacao() {
+		super();
+	}
+	public Formacao(String descricao, int periodo, double mensalidade, int duracao) {
+		super();
+		this.descricao = descricao;
+		this.periodo = periodo;
+		this.mensalidade = mensalidade;
+		this.duracao = duracao;
+	}
+	
+	
+	// metodos getter and setter
+	
+	public String getDescricao() {
+		return descricao;
+	}
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+	public int getPeriodo() {
+		return periodo;
+	}
+	public void setPeriodo(int periodo) {
+		this.periodo = periodo;
+	}
+	public double getMensalidade() {
+		return mensalidade;
+	}
+	public void setMensalidade(double mensalidade) {
+		this.mensalidade = mensalidade;
+	}
+	public int getDuracao() {
+		return duracao;
+	}
+	public void setDuracao(int duracao) {
+		this.duracao = duracao;
+	}
+
+
+	
+	
+
+}

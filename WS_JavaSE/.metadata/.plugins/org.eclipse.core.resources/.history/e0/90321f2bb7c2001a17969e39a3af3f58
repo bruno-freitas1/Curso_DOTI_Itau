@@ -1,0 +1,23 @@
+package br.com.ecommerce.implementacao;
+
+import javax.swing.JOptionPane;
+
+import br.com.ecommerce.modelo.Cliente;
+
+public class ImplementarClienteEconomico {
+
+	public static void main(String[] args) {
+		Cliente cliente = new Cliente(
+				Integer.parseInt(JOptionPane.showInputDialog("Codigo: ")),
+				JOptionPane.showInputDialog("Nome: "),
+				JOptionPane.showInputDialog("Email: "),
+				JOptionPane.showInputDialog("Fone: "),
+				JOptionPane.showInputDialog("CPF: "),
+				Float.parseFloat(JOptionPane.showInputDialog("Limite: "))
+				);
+		System.out.println(cliente.getAll());
+		
+
+	}
+
+}

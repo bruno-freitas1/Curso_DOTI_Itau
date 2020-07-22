@@ -1,0 +1,10 @@
+package br.com.excecoes.implementacao;
+
+public class TesteExcecoesChecked {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,117 @@
+package br.com.ecommerce.modelo;
+
+public class Produto {
+	
+	//Atributos
+	//se omitir o private ou public, será reconhecido apenas dentro do mesmo Package
+	private int codigo;
+	private String descricao;
+	private int qtde;
+	private float valorVenda;
+	private float valorCompra;
+	private int parcela;
+	private int atualizacaoValor;
+	
+	//metodo
+	// <modificador> <retorno> <nomeDoMetodo> (<tipo do Parametro> <nomeDoParametro>...){}
+	// quanto mais separar os metodos será mais reaproveitavel
+
+	
+	public float atualizarValoresCompra() {
+		return valorCompra * (1 + atualizacaoValor / 100);
+	}
+	
+	public float AtualizarValoresVenda() {
+		return valorVenda * (1 + atualizacaoValor / 100);
+	}
+	
+	
+	public void preencherAtualizarValores(int pAtualizacaoValor) {
+		atualizacaoValor = pAtualizacaoValor;
+	}
+		
+	
+	public float retornarParcela() {
+		return valorVenda * qtde / parcela;
+	}
+	
+	public void preencherParcela(int pParcela) {
+		parcela = pParcela;	
+	}
+	
+	
+	public float retornarValorVista() {
+		return qtde * valorVenda * 0.9f;
+	}	
+	
+	
+	public float retornarTotalCompra() {
+		return qtde * valorCompra;
+	}	
+	
+	
+	public float retornarTotalVenda() {
+		return qtde * valorVenda;
+	}
+	
+	
+	
+	//metodo para saida do valor do codigo
+	public int retornarCodigo() {
+		return codigo;
+	}
+	
+	// void significa sem retorno
+	// metodo para entrada de valor do codigo
+	public void preencherCodigo(int pCodigo) {
+		if (pCodigo > 0) {
+			codigo = pCodigo;		
+		}
+	}
+
+	
+
+	public String retornarDescricao() {
+		return descricao;
+	}
+	public void preencherDescricao(String pDescricao) {
+		if (pDescricao.length()>5 && pDescricao.length()<100) {
+		descricao = pDescricao.toUpperCase();
+		}
+	}
+
+
+	
+	public int retornarQtde() {
+		return qtde;
+	}
+	public void preencherQtde(int pQtde) {
+		if (pQtde > 0) {
+			qtde = pQtde;
+		}
+	}
+
+	
+	
+	public float retornarValorVenda() {
+		return valorVenda;
+	}
+	public void preencherValorVenda(float pValorVenda) {
+		if (pValorVenda > 0) {
+			valorVenda = pValorVenda;
+		}
+	}
+	
+	
+	
+	public float retornarValorCompra() {
+		return valorCompra;
+	}
+	public void preencherValorCompra(float pValorCompra) {
+		if (pValorCompra > 0) {
+			valorCompra = pValorCompra;
+		}
+	}
+	
+	
+}

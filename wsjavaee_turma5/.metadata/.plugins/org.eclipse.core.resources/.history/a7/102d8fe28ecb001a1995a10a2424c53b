@@ -1,0 +1,5 @@
+package br.com.itau.gerenciador.model;
+
+public class Artista {
+
+}

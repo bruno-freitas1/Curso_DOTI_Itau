@@ -1,0 +1,15 @@
+package br.com.excecoes.implementacao;
+
+public class TesteExcecao {
+
+	public static void main(String[] args) {
+		
+		try {
+			int x = Integer.parseInt("1");
+		} catch(Exception e) {
+			System.out.println("Erro");
+		}
+			
+	}
+
+}

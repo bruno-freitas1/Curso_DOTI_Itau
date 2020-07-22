@@ -1,0 +1,45 @@
+package br.com.banco.implementacao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.banco.modelo.Cliente;
+import br.com.banco.modelo.Conta;
+import br.com.banco.modelo.Endereco;
+import br.com.banco.modelo.PessoaJuridica;
+import br.com.banco.modelo.Poupanca;
+
+public class ImplementarConta {
+
+	public static void main(String[] args) {
+
+		Cliente cliente = new PessoaJuridica();
+		
+		List<String> fone = new ArrayList<String>();
+		
+		fone.add("99999999");
+		fone.add("79777676");	
+		
+		cliente.setFone(fone);
+		
+		System.out.println(cliente.getFone());
+		
+		
+		Conta conta = new Poupanca();
+		
+		conta.setCliente(new PessoaJuridica(
+				444, 
+				"Bruno", 
+				"bruno@email.com", 
+				fone, 
+				new Endereco(),
+				"10203213232/0001-12",
+				"ie",
+				"via email"
+				));
+		
+		System.out.println(conta.getCliente());
+
+	}
+
+}

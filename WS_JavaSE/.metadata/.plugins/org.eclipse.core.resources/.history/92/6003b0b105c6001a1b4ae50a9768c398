@@ -1,0 +1,59 @@
+package br.com.banco.modelo;
+
+public class PessoaJuridica {
+	
+	private String cnpj;
+	private String ie;
+	private String contato;
+	
+	
+	public String getAll() {
+		return
+				"CNPJ: " + cnpj + "\n" +
+				"IE: " + ie + "\n" +
+				"Contato: " + contato;
+	}
+	
+	
+	public void setAll(String cnpj, String ie, String contato) {
+		this.cnpj = cnpj;
+		this.ie = ie;
+		this.contato = contato;
+	}
+	
+	
+	public PessoaJuridica() {
+		super();
+	}
+	public PessoaJuridica(String cnpj, String ie, String contato) {
+		super();
+		this.cnpj = cnpj;
+		this.ie = ie;
+		this.contato = contato;
+	}
+	
+	
+	
+	
+	public String getCnpj() {
+		return cnpj;
+	}
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
+	}
+	public String getIe() {
+		return ie;
+	}
+	public void setIe(String ie) {
+		this.ie = ie;
+	}
+	public String getContato() {
+		return contato;
+	}
+	public void setContato(String contato) {
+		this.contato = contato;
+	}
+	
+	
+
+}

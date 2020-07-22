@@ -1,0 +1,19 @@
+package br.com.ecommerce.implementacao;
+
+import br.com.ecommerce.modelo.Produto;
+
+public class ImplementarProduto {
+
+	public static void main(String[] args) {
+		
+		// Criação do objeto - somente as paredes da casa e sem seperação dos comodos
+		// Produto objeto;
+		
+		// Instanciamos um objeto - uma casa com a separação dos comodos
+		Produto objeto = new Produto();
+		objeto.preencherCodigo(-1);
+		System.out.println(objeto.retornarCodigo());
+
+	}
+
+}

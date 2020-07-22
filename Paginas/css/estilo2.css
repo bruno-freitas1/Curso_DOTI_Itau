@@ -1,0 +1,26 @@
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    color: lightsalmon
+}
+
+h3 {
+    background-color: black;
+    color: orange;
+}
+
+h2:hover{
+    color: magenta
+}
+
+.margem{
+    align-content: center;
+    padding-left: 2cm;
+    padding-right: 2cm;
+    padding-top: 2cm;
+    padding-bottom: 2cm;
+}
+
+#cabecalho{
+    
+}

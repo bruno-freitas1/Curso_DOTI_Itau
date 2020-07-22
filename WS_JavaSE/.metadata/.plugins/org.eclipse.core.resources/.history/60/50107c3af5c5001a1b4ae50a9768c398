@@ -1,0 +1,29 @@
+package br.com.colecoes.principal;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class TesteSet {
+
+	public static void main(String[] args) {
+		
+		//Vantagem: é favorável para o output, mas para o input e mais lento porque tem o algoritmo de hash para buscar a posição para armazenar
+		
+		Set lista = new HashSet();
+		
+		lista.add("DBA");										// ao add o set faz uma analise de onde armazenar a informação
+		lista.add("ANALISTA");
+		lista.add("GERENTE");
+		lista.add("DBA");										// não repete ou seja não add valores iguais
+		lista.add("SUPORTE");
+		lista.add("DEV");
+		System.out.println(lista);
+		
+		System.out.println(lista.contains("DBA"));
+		
+		
+		
+
+	}
+
+}

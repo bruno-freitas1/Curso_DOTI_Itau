@@ -1,0 +1,78 @@
+package br.com.polimorfismo.modelo;
+
+public class Formacao {
+	
+	private String descricao;
+	private int periodo;
+	private double mesalidade;
+	private int duracao;
+	
+	
+	// Métodos
+	
+	public Float exibirMedia() {
+		return 10f;
+	}
+	
+	// metodos get and set All
+		
+	public String getAll(){
+		return
+				"Descrição: " + descricao + "\n" +
+				"Periodo: " + periodo + "\n" +
+				"Mesalidade: " + mesalidade + "\n" +
+				"Duracao: " + duracao;
+	}
+	
+	public void setAll(String descricao, int periodo, double mesalidade, int duracao) {
+		this.descricao = descricao;
+		this.periodo = periodo;
+		this.mesalidade = mesalidade;
+		this.duracao = duracao;
+	}
+
+	
+	// metodos construtores
+	
+	public Formacao() {
+		super();
+	}
+	public Formacao(String descricao, int periodo, double mesalidade, int duracao) {
+		super();
+		this.descricao = descricao;
+		this.periodo = periodo;
+		this.mesalidade = mesalidade;
+		this.duracao = duracao;
+	}
+	
+	
+	// metodos getter and setter
+	
+	public String getDescricao() {
+		return descricao;
+	}
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+	public int getPeriodo() {
+		return periodo;
+	}
+	public void setPeriodo(int periodo) {
+		this.periodo = periodo;
+	}
+	public double getMesalidade() {
+		return mesalidade;
+	}
+	public void setMesalidade(double mesalidade) {
+		this.mesalidade = mesalidade;
+	}
+	public int getDuracao() {
+		return duracao;
+	}
+	public void setDuracao(int duracao) {
+		this.duracao = duracao;
+	}
+	
+	
+
+}

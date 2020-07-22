@@ -1,0 +1,27 @@
+package br.com.ecommerce.modelo;
+
+public class CD extends Produto{
+	
+	private String gravadora;
+	private String artista;
+	
+	
+	
+	
+	
+	public String getGravadora() {
+		return gravadora;
+	}
+	public void setGravadora(String gravadora) {
+		this.gravadora = gravadora;
+	}
+	public String getArtista() {
+		return artista;
+	}
+	public void setArtista(String artista) {
+		this.artista = artista;
+	}
+	
+	
+
+}

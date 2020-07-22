@@ -1,0 +1,101 @@
+package br.com.polimorfismo.modelo;
+
+public abstract class Formacao {
+	
+	private String descricao = new String();
+	private int periodo;
+	private double mensalidade;
+	private int duracao;
+	
+	
+	// Métodos
+	
+	public void definirDuracao() {
+		if (this instanceof Medio) {
+			duracao = 36;
+		} else if (this instanceof Tecnologo) {
+			duracao = 24;
+		} else {
+			if (descricao.indexOf("ENGENHARIA")==-1){
+				duracao=48;
+			} else {
+				duracao=60;
+			}
+		}
+	}
+	
+	public double exibirMedia(double ps1, double ps2) {
+		return (ps1 + ps2)/2;
+	}
+	
+	public double exibirMedia(double ps1, double ps2, double nac1, double nac2) {
+		return (ps1*0.8 + ps2*0.8 + nac1*0.2 + nac2*0.2)/2;
+	}
+	
+	public double exibirMedia(double ps1, double ps2, double nac1, double nac2, double am1, double am2) {
+		return (ps1*0.5 + ps2*0.5 + nac1*0.2 + nac2*0.2 + am1*0.3 + am2*0.3)/2;
+	}	
+	
+	
+	// metodos get and set All
+		
+	public String getAll(){
+		return
+				"Descrição: " + descricao + "\n" +
+				"Periodo: " + periodo + "\n" +
+				"Mensalidade: " + mensalidade + "\n" +
+				"Duracao: " + duracao;
+	}
+	
+	public void setAll(String descricao, int periodo, double mensalidade, int duracao) {
+		this.descricao = descricao;
+		this.periodo = periodo;
+		this.mensalidade = mensalidade;
+		this.duracao = duracao;
+	}
+
+	
+	// metodos construtores
+	
+	public Formacao() {
+		super();
+	}
+	public Formacao(String descricao, int periodo, double mensalidade, int duracao) {
+		super();
+		this.descricao = descricao;
+		this.periodo = periodo;
+		this.mensalidade = mensalidade;
+		this.duracao = duracao;
+	}
+	
+	
+	// metodos getter and setter
+	
+	public String getDescricao() {
+		return descricao;
+	}
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+	public int getPeriodo() {
+		return periodo;
+	}
+	public void setPeriodo(int periodo) {
+		this.periodo = periodo;
+	}
+	public double getMensalidade() {
+		return mensalidade;
+	}
+	public void setMensalidade(double mensalidade) {
+		this.mensalidade = mensalidade;
+	}
+	public int getDuracao() {
+		return duracao;
+	}
+	public void setDuracao(int duracao) {
+		this.duracao = duracao;
+	}
+	
+	
+
+}

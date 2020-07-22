@@ -1,0 +1,21 @@
+package br.com.banco.implementacao;
+
+import br.com.banco.modelo.Cliente;
+import br.com.banco.modelo.Conta;
+import br.com.banco.modelo.Corrente;
+
+public class ImplementarConta {
+
+	public static void main(String[] args) {
+
+		Conta conta = new Corrente();
+		
+		
+		List<String> listaFone = new Lista<String>();
+		conta.setCliente(Cliente.setFone());
+		
+		
+
+	}
+
+}

@@ -1,0 +1,22 @@
+package br.com.banco.implementacao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.banco.modelo.Cliente;
+import br.com.banco.modelo.Conta;
+import br.com.banco.modelo.Corrente;
+
+public class ImplementarConta {
+
+	public static void main(String[] args) {
+
+		Cliente cliente = new PessoaJuridica();
+		
+		
+		
+		
+
+	}
+
+}

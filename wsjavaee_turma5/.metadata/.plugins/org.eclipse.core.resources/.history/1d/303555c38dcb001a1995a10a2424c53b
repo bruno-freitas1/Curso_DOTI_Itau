@@ -1,0 +1,57 @@
+package br.com.itau.gerenciador.controller;
+
+public class ArtistaController {
+	
+	private int codigo;
+	private String nomeArtistico;
+	private String nacionalidade;
+	
+	public String getAll() {
+		return
+				"Codigo: " + codigo + "\n" +
+				"Nome Artístico: " + nomeArtistico + "\n" +
+				"Nacionalidade: " + nacionalidade;
+	}
+	
+	public void setAll(int codigo, String nomeArtistico, String nacionalidade) {
+		this.codigo = codigo;
+		this.nomeArtistico = nomeArtistico;
+		this.nacionalidade = nacionalidade;
+	}	
+	
+	
+	public ArtistaController() {
+		super();
+	}
+	public ArtistaController(int codigo, String nomeArtistico, String nacionalidade) {
+		super();
+		this.codigo = codigo;
+		this.nomeArtistico = nomeArtistico;
+		this.nacionalidade = nacionalidade;
+	}
+	
+	
+	
+	
+	public int getCodigo() {
+		return codigo;
+	}
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+	public String getNomeArtistico() {
+		return nomeArtistico;
+	}
+	public void setNomeArtistico(String nomeArtistico) {
+		this.nomeArtistico = nomeArtistico;
+	}
+	public String getNacionalidade() {
+		return nacionalidade;
+	}
+	public void setNacionalidade(String nacionalidade) {
+		this.nacionalidade = nacionalidade;
+	}
+	
+	
+	
+}

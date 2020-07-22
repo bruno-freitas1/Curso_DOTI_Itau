@@ -1,0 +1,26 @@
+package br.com.excecoes.implementacao;
+
+public class TesteExcecao {
+
+	public static void main(String[] args) {
+		
+		try {
+			int x = Integer.parseInt("1");
+			System.out.println(x);
+			
+			String y = null;
+			System.out.println(y.length());
+		} catch(NullPointerException e) {
+			System.out.println("Objeto nulo");
+		} catch(NumberFormatException e) {
+			System.out.println("Formatado de número Inválido");
+		} catch(Exception e) {
+			e.printStackTrace();				// mostra o tipo de erro. Deixar essa linha enquanto estiver em desenvolvimento e testes. Depois remove para colocar em produção
+			System.out.println("Erro");
+		} finally {								//executa independente do que ocorrer (erro ou não)
+			System.out.println("Até logo");
+		}
+			
+	}
+
+}

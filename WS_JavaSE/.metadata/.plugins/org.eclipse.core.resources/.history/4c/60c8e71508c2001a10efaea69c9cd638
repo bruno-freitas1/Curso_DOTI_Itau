@@ -1,0 +1,21 @@
+package br.com.ecommerce.modelo;
+
+public class Produto {
+	
+	//Atributos
+	//se omitir o private ou public, será reconhecido apenas dentro do mesmo Package
+	private int codigo;
+	private String descricao;
+	private int qtde;
+	private float valorVenda;
+	private float valorCompra;
+	
+	//metodo
+	// <modificador> <retorno> <nomeDoMetodo> (<tipo do Parametro> <nomeDoParametro>...){}
+	// void significa sem retorno
+	public void preencherCodigo(int pCodigo) {
+		codigo = pCodigo;
+	}
+
+	
+}

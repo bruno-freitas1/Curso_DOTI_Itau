@@ -1,0 +1,41 @@
+package br.com.ecommerce.implementacao;
+
+import javax.swing.JOptionPane;
+
+import br.com.ecommerce.modelo.Produto;
+
+public class ImplementarProduto {
+
+	public static void main(String[] args) {
+		
+		// Criação do objeto - somente as paredes da casa e sem seperação dos comodos
+		// Produto objeto;
+		
+		// Instanciamos um objeto - uma casa com a separação dos comodos
+		Produto objeto = new Produto();
+		objeto.preencherCodigo(Integer.parseInt(JOptionPane.showInputDialog("Digite o código: ")));
+		objeto.preencherDescricao(JOptionPane.showInputDialog("Digite a descricao: "));
+		objeto.preencherQtde(Integer.parseInt(JOptionPane.showInputDialog("Digite a qtde: ")));
+		objeto.preencherValorVenda(Float.parseFloat(JOptionPane.showInputDialog("Digite o Valor da Venda: ")));
+		objeto.preencherValorCompra(Float.parseFloat(JOptionPane.showInputDialog("Digite o Valor da Compra: ")));
+		objeto.preencherParcela(Integer.parseInt(JOptionPane.showInputDialog("Digite a qtde de parcelas: ")));
+		objeto.preencherAtualizarValores(Integer.parseInt(JOptionPane.showInputDialog("Digite a qtde de parcelas: ")));
+		
+		
+		System.out.println("Codigo: " + objeto.retornarCodigo());
+		System.out.println("Descricao: " + objeto.retornarDescricao());
+		System.out.println("Qtde: " + objeto.retornarQtde());
+		System.out.println("Valor da Venda: " + objeto.retornarValorVenda());
+		System.out.println("Valor da Compra: " + objeto.retornarValorCompra());
+	
+		System.out.println("Total Venda: " + objeto.retornarTotalVenda());
+		
+		System.out.println("Total Compra: " + objeto.retornarTotalCompra());
+		System.out.printf("O valor a vista é: %.2f \n", objeto.retornarValorVista());
+		System.out.println("Valor da Parcela: " + objeto.retornarParcela());
+		System.out.println("Valor de Venda Atualizado: " + objeto.atualizarValoresVenda());
+		System.out.println("Valor de Compra Atualizado: " + objeto.atualizarValoresCompra());
+
+	}
+
+}

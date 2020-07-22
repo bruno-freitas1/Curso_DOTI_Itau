@@ -1,0 +1,38 @@
+package br.com.ecommerce.implementacao;
+
+import javax.swing.JOptionPane;
+
+import br.com.ecommerce.modelo.Cliente;
+
+public class ImplementarClienteEconomico {
+
+	// metodo Static - metodo que não exige que instancie um objeto
+	// Não trabalha com atributos
+
+	public static float f(String msg) {
+		return Float.parseFloat(t(msg));
+	}
+	
+	public static int i(String msg) {
+		return Integer.parseInt(t(msg));
+	}
+	
+	public static String t(String msg) {
+		return JOptionPane.showInputDialog(msg);
+	}
+	
+	public static void main(String[] args) {
+		Cliente cliente = new Cliente(
+				i("Codigo: "),
+				t("Nome: "),
+				t("Email: "),
+				t("Fone: "),
+				t("CPF: "),
+				f("Limite: ")
+				);
+		System.out.println(cliente.getAll());
+		
+
+	}
+
+}

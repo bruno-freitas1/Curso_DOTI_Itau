@@ -1,0 +1,57 @@
+package br.com.universidade.modelo;
+
+public class Professor extends Pessoa{
+	
+	private String cpf;
+	private String dtContratacao;
+	private float valorHora;
+
+
+	public void setAll(String nome, String email, String fone, Endereco endereco, String cpf, String dtContratacao,
+			float valorHora) {
+		super.setAll(nome, email, fone, endereco);
+		this.cpf = cpf;
+		this.dtContratacao = dtContratacao;
+		this.valorHora = valorHora;
+	}
+	
+	
+	// metodo Construtor com super construtor da classe Pessoa
+
+	public Professor() {
+		super();
+	}
+	public Professor(String nome, String email, String fone, Endereco endereco, String cpf, String dtContratacao,
+			float valorHora) {
+		super(nome, email, fone, endereco); 		// recebe os parametros da super classe Pessoa
+		this.cpf = cpf;
+		this.dtContratacao = dtContratacao;
+		this.valorHora = valorHora;
+	}
+
+
+
+	// Metodos getter and setter
+	
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+	public String getDtContratacao() {
+		return dtContratacao;
+	}
+	public void setDtContratacao(String dtContratacao) {
+		this.dtContratacao = dtContratacao;
+	}
+	public float getValorHora() {
+		return valorHora;
+	}
+	public void setValorHora(float valorHora) {
+		this.valorHora = valorHora;
+	}
+
+	
+	
+}

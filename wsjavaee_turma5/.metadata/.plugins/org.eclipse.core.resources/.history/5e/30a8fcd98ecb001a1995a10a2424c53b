@@ -1,0 +1,73 @@
+package br.com.itau.gerenciador.controller;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="T_AULA_ARTISTA")
+public class ArtistaController {
+	
+	@Column(name="CODIGO")   	
+	@Id        			
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int codigo;
+	
+	@Column(name="NOME_ARTISTICO", length=40)
+	private String nomeArtistico;
+	
+	@Column(name="NACIONALIDADE", length=30) 
+	private String nacionalidade;
+	
+	public String getAll() {
+		return
+				"Codigo: " + codigo + "\n" +
+				"Nome Artístico: " + nomeArtistico + "\n" +
+				"Nacionalidade: " + nacionalidade;
+	}
+	
+	public void setAll(int codigo, String nomeArtistico, String nacionalidade) {
+		this.codigo = codigo;
+		this.nomeArtistico = nomeArtistico;
+		this.nacionalidade = nacionalidade;
+	}	
+	
+	
+	public ArtistaController() {
+		super();
+	}
+	public ArtistaController(int codigo, String nomeArtistico, String nacionalidade) {
+		super();
+		this.codigo = codigo;
+		this.nomeArtistico = nomeArtistico;
+		this.nacionalidade = nacionalidade;
+	}
+	
+	
+	
+	
+	public int getCodigo() {
+		return codigo;
+	}
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+	public String getNomeArtistico() {
+		return nomeArtistico;
+	}
+	public void setNomeArtistico(String nomeArtistico) {
+		this.nomeArtistico = nomeArtistico;
+	}
+	public String getNacionalidade() {
+		return nacionalidade;
+	}
+	public void setNacionalidade(String nacionalidade) {
+		this.nacionalidade = nacionalidade;
+	}
+	
+	
+	
+}
